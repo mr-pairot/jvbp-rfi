@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JVBP Document - RFI</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+</head>
+<body>
+
+  <div id="loader">
+    <div class="spinner"></div>
+    <p>Loading...</p>
+  </div>
+
+  <div id="iframe-container" style="margin-top: 20px;">
+    <!-- iframe สำหรับแสดง Looker -->
+  </div>
+
+  <script>
+    const buttonName = 'RFI';
+    const liffId = '2007032148-438KQYKA';
+
+    const script = document.createElement('script');
+    script.src = 'script.js'; // เพิ่ม script.js
+    script.onload = function () {
+      window.buttonName = buttonName;
+      window.liffId = liffId;
+      initLiff();
+    };
+    document.body.appendChild(script);
+  </script>
+</body>
+</html>
